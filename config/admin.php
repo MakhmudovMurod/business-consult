@@ -11,7 +11,7 @@ return [
     | login page.
     |
     */
-    'name' => 'Kost Legal',
+    'name' => 'Business Consult',
 
     /*
     |--------------------------------------------------------------------------
@@ -22,7 +22,7 @@ return [
     | `img` tag, eg '<img src="http://logo-url" alt="Admin logo">'.
     |
     */
-    'logo' => '<b>Kosta</b> Legal',
+    'logo' => '<b>Business</b> Consult',
 
     /*
     |--------------------------------------------------------------------------
@@ -34,7 +34,7 @@ return [
     | '<img src="http://logo-url" alt="Admin logo">'.
     |
     */
-    'logo-mini' => '<b>KL</b>',
+    'logo-mini' => '<b>BC</b>',
 
     /*
     |--------------------------------------------------------------------------

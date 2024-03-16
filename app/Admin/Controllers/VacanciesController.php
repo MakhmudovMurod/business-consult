@@ -74,9 +74,9 @@ class VacanciesController extends AdminController
         $form->text('title_ru', __('Title ru'));
         $form->text('title_uz', __('Title uz'));
         $form->text('title_en', __('Title en'));
-        $form->textarea('description_ru', __('Description ru'));
-        $form->textarea('description_uz', __('Description uz'));
-        $form->textarea('description_en', __('Description en'));
+        $form->ckeditor('description_ru', __('Description ru'));
+        $form->ckeditor('description_uz', __('Description uz'));
+        $form->ckeditor('description_en', __('Description en'));
 
         return $form;
     }

@@ -27,8 +27,13 @@ class ServicesController extends AdminController
         $grid = new Grid(new Service());
 
         $grid->column('id', __('Id'));
-        $grid->column('name', __('Name'));
-        $grid->column('image', __('Image'));
+        $grid->column('image', __('Image'))->image();
+        $grid->column('title_ru', __('Title ru'));
+        $grid->column('title_uz', __('Title uz'));
+        $grid->column('title_en', __('Title en'));
+        $grid->column('description_ru', __('Description ru'));
+        $grid->column('description_uz', __('Description uz'));
+        $grid->column('description_en', __('Description en'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 
@@ -46,8 +51,13 @@ class ServicesController extends AdminController
         $show = new Show(Service::findOrFail($id));
 
         $show->field('id', __('Id'));
-        $show->field('name', __('Name'));
         $show->field('image', __('Image'));
+        $show->field('title_ru', __('Title ru'));
+        $show->field('title_uz', __('Title uz'));
+        $show->field('title_en', __('Title en'));
+        $show->field('description_ru', __('Description ru'));
+        $show->field('description_uz', __('Description uz'));
+        $show->field('description_en', __('Description en'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -63,8 +73,13 @@ class ServicesController extends AdminController
     {
         $form = new Form(new Service());
 
-        $form->text('name', __('Name'));
         $form->image('image', __('Image'));
+        $form->text('title_ru', __('Title ru'));
+        $form->text('title_uz', __('Title uz'));
+        $form->text('title_en', __('Title en'));
+        $form->ckeditor('description_ru', __('Description ru'));
+        $form->ckeditor('description_uz', __('Description uz'));
+        $form->ckeditor('description_en', __('Description en'));
 
         return $form;
     }

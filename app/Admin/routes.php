@@ -13,10 +13,11 @@ Route::group([
 
     $router->get('/', 'HomeController@index')->name('home');
     $router->resource('banners', BannersController::class);
+    $router->resource('services', ServicesController::class);
     $router->resource('posts', PostsController::class);
     $router->resource('clients', ClientsController::class);
-    $router->resource('services', ServicesController::class);
-    $router->resource('employees', EmployeesController::class);
     $router->resource('vacancies', VacanciesController::class);
-    $router->resource('information', InformationsController::class);
+    $router->resource('employees', EmployeesController::class);
+    $router->resource('applications', ApplicationsController::class);
+    $router->resource('requests', RequestsController::class);
 });

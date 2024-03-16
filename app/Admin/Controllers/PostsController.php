@@ -17,7 +17,7 @@ class PostsController extends AdminController
         $grid = new Grid(new Post());
 
         $grid->column('id', __('Id'));
-        $grid->column('image', __('Image'));
+        $grid->column('image', __('Image'))->image();
         $grid->column('title_uz', __('Title uz'));
         $grid->column('title_ru', __('Title ru'));
         $grid->column('title_en', __('Title en'));
@@ -52,13 +52,13 @@ class PostsController extends AdminController
     {
         $form = new Form(new Post());
 
-        $form->image('image', __('Image'));
+        $form->file('image', __('File'));
         $form->text('title_uz', __('Title uz'));
         $form->text('title_ru', __('Title ru'));
         $form->text('title_en', __('Title en'));
-        $form->textarea('description_uz', __('Description uz'));
-        $form->textarea('description_ru', __('Description ru'));
-        $form->textarea('description_en', __('Description en'));
+        $form->ckeditor('description_uz', __('Description uz'));
+        $form->ckeditor('description_ru', __('Description ru'));
+        $form->ckeditor('description_en', __('Description en'));
 
         return $form;
     }

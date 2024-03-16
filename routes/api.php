@@ -7,4 +7,3 @@ use App\Http\Controllers\MainController;
 
 
 Route::get('index', [MainController::class, 'index']);
-

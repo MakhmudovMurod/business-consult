@@ -20,4 +20,7 @@ Route::group([
     $router->resource('employees', EmployeesController::class);
     $router->resource('applications', ApplicationsController::class);
     $router->resource('requests', RequestsController::class);
+    $router->resource('case-studies', CaseStudiesController::class);
+    $router->resource('general-informations', GeneralInformationsController::class);
+
 });

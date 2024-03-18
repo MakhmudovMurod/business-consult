@@ -27,7 +27,7 @@ class EmployeesController extends AdminController
         $grid = new Grid(new Employee());
 
         $grid->column('id', __('Id'));
-        $grid->column('image', __('Image'));
+        $grid->column('image', __('Image'))->image();
         $grid->column('name_ru', __('Name ru'));
         $grid->column('name_uz', __('Name uz'));
         $grid->column('name_en', __('Name en'));

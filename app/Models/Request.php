@@ -5,4 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 class Request extends Model
-{}
+{
+    protected $fillable = [
+        'fullname',
+        'email',
+        'phone_number',
+        'message',
+    ];
+}

@@ -175,6 +175,15 @@ class MainController extends Controller
         return response()->json(['message' => 'Client request created successfully'], 201);
     }
 
+    public function news()
+    {
+        $posts = Post::all();
+
+        return response()->json([
+            'news' => NewsResource::collection($posts),
+        ], 200);
+    }
+
     public function applyToJob(Request $request)
     {
         $validatedData = $request->validate([

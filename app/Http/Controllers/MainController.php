@@ -36,7 +36,9 @@ class MainController extends Controller
             ],
             'footer' => [
                 'logo' => Storage::disk('public')->url($c->big_logo),
-                'company_description' => $c->footer_description,
+                'company_description_uz' => $c->footer_description_uz,
+                'company_description_ru' => $c->footer_description_ru,
+                'company_description_en' => $c->footer_description_en,
                 'phone_number' => $c->phone_number,
                 'address_ru' => $c->address_ru,
                 'address_uz' => $c->address_uz,

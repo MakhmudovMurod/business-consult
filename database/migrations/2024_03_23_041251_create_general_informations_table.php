@@ -15,20 +15,22 @@ class CreateGeneralInformationsTable extends Migration
     {
         Schema::create('general_informations', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('small_logo')->nullable();
+            $table->string('small_logo');
             $table->string('instagram_link')->nullable();
             $table->string('telegram_link')->nullable();
             $table->string('facebook_link')->nullable();
-            $table->string('big_logo')->nullable();
-            $table->longText('footer_description')->nullable();
-            $table->string('phone_number')->nullable();
-            $table->longText('address_ru')->nullable();
-            $table->longText('address_uz')->nullable();
-            $table->longText('address_en')->nullable();
-            $table->string('email')->nullable();
-            $table->longText('about_text_ru')->nullable();
-            $table->longText('about_text_uz')->nullable();
-            $table->longText('about_text_en')->nullable();
+            $table->string('big_logo');
+            $table->longText('footer_description_uz');
+            $table->longText('footer_description_ru');
+            $table->longText('footer_description_en');
+            $table->string('phone_number');
+            $table->string('address_ru');
+            $table->string('address_uz');
+            $table->string('address_en');
+            $table->string('email');
+            $table->string('about_text_ru');
+            $table->string('about_text_uz');
+            $table->string('about_text_en');
             $table->timestamps();
         });
     }

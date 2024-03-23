@@ -32,7 +32,9 @@ class GeneralInformationsController extends AdminController
         $grid->column('telegram_link', __('Telegram link'));
         $grid->column('facebook_link', __('Facebook link'));
         $grid->column('big_logo', __('Big logo'))->image();
-        $grid->column('footer_description', __('Footer description'));
+        $grid->column('footer_description_uz', __('Footer description uz'));
+        $grid->column('footer_description_ru', __('Footer description ru'));
+        $grid->column('footer_description_en', __('Footer description en'));
         $grid->column('phone_number', __('Phone number'));
         $grid->column('address_ru', __('Address ru'));
         $grid->column('address_uz', __('Address uz'));
@@ -63,7 +65,9 @@ class GeneralInformationsController extends AdminController
         $show->field('telegram_link', __('Telegram link'));
         $show->field('facebook_link', __('Facebook link'));
         $show->field('big_logo', __('Big logo'))->image();
-        $show->field('footer_description', __('Footer description'));
+        $show->field('footer_description_uz', __('Footer description uz'));
+        $show->field('footer_description_ru', __('Footer description ru'));
+        $show->field('footer_description_en', __('Footer description en'));
         $show->field('phone_number', __('Phone number'));
         $show->field('address_ru', __('Address ru'));
         $show->field('address_uz', __('Address uz'));
@@ -92,16 +96,18 @@ class GeneralInformationsController extends AdminController
         $form->text('instagram_link', __('Instagram link'));
         $form->text('telegram_link', __('Telegram link'));
         $form->text('facebook_link', __('Facebook link'));
-        $form->ckeditor('about_text_ru', __('About text ru'));
-        $form->ckeditor('about_text_uz', __('About text uz'));
-        $form->ckeditor('about_text_en', __('About text en'));
-        $form->ckeditor('footer_description', __('Footer description'));
+        $form->ckeditor('footer_description_uz', __('Footer description uz'));
+        $form->ckeditor('footer_description_ru', __('Footer description ru'));
+        $form->ckeditor('footer_description_en', __('Footer description en'));
         $form->text('phone_number', __('Phone number'));
         $form->ckeditor('address_ru', __('Address ru'));
         $form->ckeditor('address_uz', __('Address uz'));
         $form->ckeditor('address_en', __('Address en'));
         $form->email('email', __('Email'));
-    
+        $form->ckeditor('about_text_ru', __('About text ru'));
+        $form->ckeditor('about_text_uz', __('About text uz'));
+        $form->ckeditor('about_text_en', __('About text en'));
+
         return $form;
     }
 }

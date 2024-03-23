@@ -29,21 +29,21 @@ class MainController extends Controller
 
         return response()->json([
             'header' => [
-                'mini_logo' => Storage::disk('public')->url($c->small_logo),
+                'mini_logo' => Storage::disk('public')->url($c->small_logo) ?? '',
                 'instagram_link' => $c->instagram_link ?? '',
                 'telegram_link' => $c->telegram_link ?? '',
                 'facebook_link' => $c->facebook_link ?? '',
             ],
             'footer' => [
-                'logo' => Storage::disk('public')->url($c->big_logo),
-                'company_description_uz' => $c->footer_description_uz,
-                'company_description_ru' => $c->footer_description_ru,
-                'company_description_en' => $c->footer_description_en,
-                'phone_number' => $c->phone_number,
-                'address_ru' => $c->address_ru,
-                'address_uz' => $c->address_uz,
-                'address_en' => $c->address_en,
-                'email' => $c->email,
+                'logo' => Storage::disk('public')->url($c->big_logo) ?? '',
+                'company_description_uz' => $c->footer_description_uz ?? '',
+                'company_description_ru' => $c->footer_description_ru ?? '',
+                'company_description_en' => $c->footer_description_en ?? '',
+                'phone_number' => $c->phone_number ?? '',
+                'address_ru' => $c->address_ru ?? '',
+                'address_uz' => $c->address_uz ?? '',
+                'address_en' => $c->address_en ?? '',
+                'email' => $c->email ?? '',
             ]
         ],200);
     }

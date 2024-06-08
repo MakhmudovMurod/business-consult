@@ -11,7 +11,7 @@ Route::group([
     'as'            => config('admin.route.prefix') . '.',
 ], function (Router $router) {
 
-    $router->get('/', 'HomeController@index')->name('home');
+    $router->get('/', 'RequestsController@index')->name('home');
     $router->resource('banners', BannersController::class);
     $router->resource('services', ServicesController::class);
     $router->resource('posts', PostsController::class);
